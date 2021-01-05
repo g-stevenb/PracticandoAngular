@@ -1,0 +1,36 @@
+<!-- <p>solicitar-datos works!</p> -->
+<div class="container content">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <span class="anchor" id="formContactenos"></span>
+            <!-- Form contact -->
+            <div class="card car-outline-secundary">
+                <div class="card-header">
+                    <h3 class="mb-0">Contactenos</h3>
+                </div>
+                <div class="card-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre.." #nombre>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu dirección de correo..." #email>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <!-- <textarea class="form-control" name="asunto" id="asunto" cols="10" rows="10" #asunto></textarea> -->
+                            <input type="text" class="form-control" id="asunto" placeholder="Ingrese asunto.." size="5" #asunto>
+                        </div>
+                        <button type="button" class="btn btn-primary" (click)="guardar(nombre.value, email.value, asunto.value)">ENVIAR!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="mb-5">
+<div class="row row-flex">
+    <app-listar-datos *ngFor="let item of datos" [datos]="item"></app-listar-datos>
+</div>
